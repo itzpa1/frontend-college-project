@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 8</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: monospace;
+            background-image: url(img/bg.jpg);
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            font-size: 18px;
+        }
+
+        .containerBox {
+            width: 70%;
+            height: 80%;
+            margin-top: 100px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            backdrop-filter: blur(2px);
+            padding: 10px;
+        }
+
+        .containerBox .question {
+            border-bottom: 2px solid #000;
+        }
+
+        .containerBox .question span {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+
+
+        .answerBox {
+            /* font-family: none; */
+            width: 90%;
+            height: 90%;
+            background: #fff;
+        }
+
+        .answer h2 {
+            color: blue;
+        }
+
+        .answerBox form {
+            height: 400px;
+            width: auto;
+            border: 2px solid #000;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .answerBox .btns{
+            color: #000;
+            background-color: #fff;
+            padding: 5px 10px;
+            border-radius: 10px;
+            border: 2px solid blue;
+            outline: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0 20px;
+            transition: 0.2s;
+        }
+
+        .answerBox form input,
+        form label {
+            margin-bottom: 10px;
+        }
+
+        .answerBox form .btn {
+            margin-top: 20px;
+        }
+
+        .answerBox form input:not(.btns), textarea, select{
+            outline: blue;
+            border: 2px solid blue;
+            height: 20px;
+            border-radius: 5px;
+        }
+
+        .answerBox form input:focus, textarea:focus{
+            border: 2px solid red;
+        }
+
+
+        .btns:hover{
+            background: red;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="containerBox">
+        <h2 class="question">Questions 8:<span>Create a student registration form using text, radio button, check box,
+                drop down box, text field and all other required HTML elements. Customize the CSS and javascript to
+                input and validate all data. Create functions to perform validation of each element, example: • Roll
+                number is a 7-digit numeric value • Name should be an alphabetical value (String) • Non-empty and valid
+                fields like DOB</span></h2>
+        <div class="answer">
+            <h2>Answer:</h2>
+            <div class="answerBox">
+                <form action="#">
+                    <label for="name">Full Name: </label>
+                    <input type="text" name="name" placeholder="Enter full name" id="name" onchange="nameValidate()"
+                        required><br>
+                    <label for="rollno">Roll No.: </label>
+                    <input type="number" name="rollno" id="rollno" placeholder="Enter your roll no."
+                        onchange="rollValidate()" required> eg: 2337100<br>
+                    <label for="gender">Gender: </label>
+                    <input type="radio" name="gender" id="male" value="Male"> Male
+                    <input type="radio" name="gender" id="female" value="Female"> Female<br>
+                    <label for="dob">Date of Birth: </label>
+                    <input type="date" placeholder="Enter DOB" id="dob" onchange="dobValidate()" required> eg:
+                    MM/DD/YYYY<br>
+                    <label for="phone">Mobile Number: </label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter Mobile Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required> eg: 9472783420<br>
+                    <label for="email">Email: </label>
+                    <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Enter email"
+                        required><br>
+                    <label for="address">Address: </label>
+                    <textarea name="" id="" cols="40" rows="1" placeholder="Enter Your address"></textarea><br>
+                    <label for="year">Choose Course year: </label>
+                    <select name="year" id="year">
+                        <option value="default" selected>Select</option>
+                        <option value="1">First Year</option>
+                        <option value="1">Second Year</option>
+                        <option value="1">Third Year</option>
+                        <option value="1">Fourth Year</option>
+                    </select><br>
+                    <label for="courseName">Degree Program: </label>
+                    <select name="courseName" id="courseName">
+                        <option value="default">Select</option>
+                        <option value="ba">B.A</option>
+                        <option value="bsc">B.Sc.</option>
+                        <option value="bcom">B.Com.</option>
+                    </select><br>
+                    <label for="hobbies">Hobbies: </label>
+                    <input type="checkbox" name="hobbies" id="reading"> Reading
+                    <input type="checkbox" name="hobbies" id="writingr"> creative writing
+                    <input type="checkbox" name="hobbies" id="sports"> Playing sports
+                    <input type="checkbox" name="hobbies" id="dance"> Dance
+                    <input type="checkbox" name="hobbies" id="coding"> Coding <br>
+                    <div class="btn"><input type="submit" class="btns" value="Submit" onclick="checkInput()">
+                        <input type="reset" class="btns" value="Reset">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    function rollValidate() {
+        const rollno = document.getElementById('rollno');
+        rollValue = rollno.value.toString().length;
+
+        if (rollValue != 7) {
+            alert("Enter 7-digit Roll number!");
+            rollno.value = '';
+        } else {
+            alert(rollno);
+        }
+    }
+
+    function nameValidate() {
+        const name = document.getElementById("name");
+
+        var matches = name.value.match(/\d+/g);
+        if (matches != null || name.value == '') {
+            alert('Name should be alphabets!');
+        }
+    }
+
+    function checkInput() {
+        nameValidate()
+        rollValidate()
+    }
+</script>
+
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 6</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: monospace;
+            background-image: url(img/bg.jpg);
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            font-size: 18px;
+        }
+
+        .containerBox {
+            width: 70%;
+            height: 80%;
+            margin-top: 100px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            backdrop-filter: blur(2px);
+            padding: 10px;
+        }
+
+        .containerBox .question {
+            border-bottom: 2px solid #000;
+        }
+
+        .containerBox .question span {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+
+
+        .answerBox {
+            /* font-family: none; */
+            width: 90%;
+            height: 90%;
+            background: #fff;
+        }
+
+        .answer h2 {
+            color: blue;
+        }
+
+        .answerBox navbar{
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .answerBox navbar p{
+            background: blue;
+            margin: 10px 0;
+            width: 200px;
+            padding: 10px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .answerBox .items {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+        }
+
+        .answerBox .items div{
+            width: 200px;
+            background: skyblue;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .students, .faculty, .admissions, .about, .academics{
+            opacity: 0;
+        }
+
+
+
+        .answerBox .items div p{
+            border-bottom: 2px solid red;
+            margin-bottom: 5px;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        .answerBox .items div p:hover{
+            background: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="containerBox">
+        <h2 class="question">Questions 6:<span>Create a webpage for your department with a drop-down navigation menu for faculty,class= courses, activities, etc.. Implement the webpage using styles, rules, selectors etc. learned in CSS</span></h2>
+        <div class="answer">
+            <h2>Answer:</h2>
+            <div class="answerBox">
+               <navbar>
+                <p id="student" onmouseover="">STUDENTS</p>
+                <p id="faculty">FACULTY & STAFF</p>
+                <p id="admissions">ADMISSIONS</p>
+                <p id="academics">ACADEMICS</p>
+                <p id="about">ABOUT</p>
+               </navbar>
+               <div class="items">
+                <div class="students">
+                    <p>Login</p>
+                    <p>Fee payment</p>
+                    <p>Attendance</p>
+                    <p>Anti-ragging commitee</p>
+                    <p>Student Union</p>
+                </div>
+                <div class="faculty">
+                    <p>Login</p>
+                    <p>Forms</p>
+                    <p>Employee Login</p>
+                </div>
+                <div class="admissions">
+                    <p>Latest News</p>
+                    <p>Eligbility</p>
+                    <p>Fee Structure</p>
+                    <p>Intake Capacity</p>
+                    <p>Seat Allocation <br>system</p>
+                    <p>Prospectus</p>
+                    <p>FAQs</p>
+                </div>
+                <div class="academics">
+                    <p>Course Offered</p>
+                    <p>Departments</p>
+                    <p>E-resources</p>
+                    <p>Timetable</p>
+                    <p>Internal assessments</p>
+                    <p>DU Examination</p>
+                </div>
+                <div class="about">
+                    <p>Intro ARSD</p>
+                    <p>Administration</p>
+                    <p>Staff Council</p>
+                    <p>Governing Body</p>
+                    <p>Committes</p>
+                    <p>Principal's Welcome</p>
+                    <p>Scholarship</p>
+                </div>
+               </div>                
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var elid = "";
+    document.onmouseover = function(e) {
+        elid = e.target.id;
+        console.log(elid);
+    }
+
+    if (elid = "students") {
+        document.querySelector('.about').style.opacity = "1";
+    } else {
+        document.querySelector('.items').style.opacity = "0";
+    }
+</script>
+</html>

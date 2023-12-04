@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: monospace;
+            background-image: url(img/bg.jpg);
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            font-size: 18px;
+        }
+        
+        .containerBox{
+            width: 70%;
+            height: 80%;
+            margin-top: 100px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            backdrop-filter: blur(2px);
+            padding: 10px;
+        }
+
+        .containerBox .question{
+            border-bottom: 2px solid #000;
+        }
+
+        .containerBox .question span{
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+
+
+        .answerBox{
+            font-family: none;
+            width: 90%;
+            height: 90%;
+            background: #fff;
+        }
+
+        .answer h2{
+            color: blue;
+        }
+
+        hr{
+            height: 5px;
+            background: red;
+        }
+
+        .answerBox ol li, .answerBox ul li{
+            margin-left: 20px;
+        }
+
+        .answerBox div{
+            display: flex;
+        }
+        .answerBox img{
+            margin-left: 10px;
+            width: 150px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="containerBox">
+        <h2 class="question">Questions 2:<span>Create an HTML document with Ordered and Unordered lists, Inserting Images, Internal and External linking.</span></h2>
+        <div class="answer">
+            <h2>Answer:</h2>
+            <div class="answerBox">
+                <ol>This is Ordered List:
+                    <li>Pawan Kumar</li>
+                    <li>viraj Tanti</li>
+                    <li>Sunny Kumar</li>
+                    <li>Sahil Raghav</li>
+                </ol>
+                <hr>
+                <ul>This is Unordered List:
+                    <li>Pawan Kumar</li>
+                    <li>viraj Tanti</li>
+                    <li>Sunny Kumar</li>
+                    <li>Sahil Raghav</li>
+                </ul>
+                <div>This is Inserted Image : <img src="img/frontend.png" alt="This is Inserted Image"></div>
+                <a href="index.html" title="Internal linking">This is Internal Linking.</a><br>
+                <a href="https://www.arsdcollege.ac.in/" title="External linking">This is External Linking.</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

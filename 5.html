@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 5</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: monospace;
+            background-image: url(img/bg.jpg);
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            font-size: 18px;
+        }
+        
+        .containerBox{
+            width: 70%;
+            height: 80%;
+            margin-top: 100px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            backdrop-filter: blur(2px);
+            padding: 10px;
+        }
+
+        .containerBox .question{
+            border-bottom: 2px solid #000;
+        }
+
+        .containerBox .question span{
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+
+
+        .answerBox{
+            /* font-family: none; */
+            width: 90%;
+            height: 90%;
+            background: #fff;
+        }
+
+        .answer h2{
+            color: blue;
+        }
+
+        .answerBox form{
+            height: 400px;
+            width: auto;
+            border: 2px solid #000;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .answerBox form input[type=submit], input[type=reset]{
+            color: #000;
+            background-color: #fff;
+            padding: 5px 10px;
+            border-radius: 10px;
+            border: 2px solid blue;
+            outline: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0 20px;
+        }
+
+        .answerBox form input, form label{
+            margin-bottom: 10px;
+        }
+
+        .answerBox form .btn{
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="containerBox">
+        <h2 class="question">Questions 5:<span>Create a student registration form using HTML which has the following controls and make an interactive content presentation using CSS.: • Text Box • Dropdown Box • option/Radio • Check Box • Reset & Submit</span></h2>
+        <div class="answer">
+            <h2>Answer:</h2>
+            <div class="answerBox">
+                <form action="#">
+                    <label for="name">Full Name: </label>
+                    <input type="text" name="name" placeholder="Enter full name" required><br>
+                    <label for="gender">Gender: </label>
+                    <input type="radio" name="gender" id="male" value="Male"> Male
+                    <input type="radio" name="gender" id="female" value="Female"> Female<br>
+                    <label for="mobileNumber">Mobile Number: </label>
+                    <input type="number" name="mobileNumber" minlength="1" maxlength="10" placeholder="Enter Mobile Number" required> eg: 9472783420<br>
+                    <label for="email">Email: </label>
+                    <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Enter email" required><br>
+                    <label for="year">Choose Course year: </label>
+                    <select name="year" id="year">
+                        <option value="default" selected>Select</option>
+                        <option value="1">First Year</option>
+                        <option value="1">Second Year</option>
+                        <option value="1">Third Year</option>
+                        <option value="1">Fourth Year</option>
+                    </select><br>
+                    <label for="courseName">Degree Program: </label>
+                    <select name="courseName" id="courseName">
+                        <option value="default">Select</option>
+                        <option value="ba">B.A</option>
+                        <option value="bsc">B.Sc.</option>
+                        <option value="bcom">B.Com.</option>
+                    </select><br>
+                    <label for="hobbies">Hobbies: </label>
+                    <input type="checkbox" name="hobbies" id="reading"> Reading
+                    <input type="checkbox" name="hobbies" id="writingr"> creative writing
+                    <input type="checkbox" name="hobbies" id="sports"> Playing sports
+                    <input type="checkbox" name="hobbies" id="dance"> Dance
+                    <input type="checkbox" name="hobbies" id="coding"> Coding <br>
+                    <div class="btn"><input type="submit" value="Submit">
+                    <input type="reset" value="Reset"></div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

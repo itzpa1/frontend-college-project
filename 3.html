@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: monospace;
+            background-image: url(img/bg.jpg);
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            font-size: 18px;
+        }
+        
+        .containerBox{
+            width: 70%;
+            height: 80%;
+            margin-top: 100px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            backdrop-filter: blur(2px);
+            padding: 10px;
+        }
+
+        .containerBox .question{
+            border-bottom: 2px solid #000;
+        }
+
+        .containerBox .question span{
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+
+
+        .answerBox{
+            /* font-family: none; */
+            width: 90%;
+            height: 90%;
+            background: #fff;
+        }
+
+        .answer h2{
+            color: blue;
+        }
+
+        hr{
+            height: 5px;
+            background: red;
+        }
+
+        table, th, td{
+            border: 1px solid #000;
+            border-radius: 5px;
+        }
+
+        th, td{
+            text-align: center;
+            height: 50px;
+        }
+
+        .timetable atble{
+            position: fixed;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="containerBox">
+        <h2 class="question">Questions 3:<span>Create an HTML document for displaying the current semester's timetable.</span></h2>
+        <div class="answer">
+            <h2>Answer:</h2>
+            <div class="answerBox">
+                <h4>This is Timetable of B.Sc. Maths(H):-</h4>
+                <div class="timetable">
+                    <table>
+                        <tr>
+                            <th>Period/Day</th>
+                            <th>I <br>8:30 am</th>
+                            <th>II <br>9:30 am</th>
+                            <th>III <br>10:30 am</th>
+                            <th>IV <br>11:30 am</th>
+                            <th>V <br>12:30 am</th>
+                            <th>VI <br>1:30 pm</th>
+                            <th>VII <br>2:30 pm</th>
+                            <th>VIII <br>3:30 pm</th>
+                            <th>IX <br>4:30 pm</th>
+                            <th>X <br>5:30 pm</th>
+                        </tr>
+                        <tr>
+                            <td>Monday</td>
+                            <td>EVS <br>4</td>
+                            <td></td>
+                            <td>Maths(H) SJ <br>4</td>
+                            <td>Maths(H) SJ <br>4</td>
+                            <td>GE</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>EVS <br>T5</td>
+                            <td>EVS <br>T5</td>
+                            <td>MATHS(H) SJ <br>T5</td>
+                            <td>MATHS(H) Guest <br>T5</td>
+                            <td>GE</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>MATHS(H) PJ <br>4</td>
+                            <td>MATHS(H) PJ <br>4</td>
+                            <td></td>
+                            <td></td>
+                            <td>GE</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>MATHS(H) Guest <br>52</td>
+                            <td>GE</td>
+                            <td>MATHS(H) Guest <br>T5</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td></td>
+                            <td>MATHS(H) PJ <br>4</td>
+                            <td colspan="2">NCL AT/AM</td>
+                            <td>GE</td>
+                            <td colspan="2">SEC</td>
+                            <td>VAC</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td colspan="2">SEC</td>
+                            <td colspan="2">VAC</td>
+                            <td>GE</td>
+                            <td colspan="2">AEC</td>
+                            <td colspan="2">GE LAB</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

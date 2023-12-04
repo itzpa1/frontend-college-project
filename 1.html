@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: monospace;
+            background-image: url(img/bg.jpg);
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            font-size: 18px;
+        }
+        
+        .containerBox{
+            width: 70%;
+            height: 80%;
+            margin-top: 100px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            backdrop-filter: blur(2px);
+            padding: 10px;
+        }
+
+        .containerBox .question{
+            border-bottom: 2px solid #000;
+        }
+
+        .containerBox .question span{
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+
+
+        .answerBox{
+            font-family: none;
+            width: 90%;
+            height: 90%;
+            background: #fff;
+        }
+
+        .answer h2{
+            color: blue;
+        }
+
+        hr{
+            height: 5px;
+            background-color: red;
+        }
+
+        blink{
+            animation: blinker 1.5s linear infinite;
+        }
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }}
+    </style>
+</head>
+<body>
+    <div class="containerBox">
+        <h2 class="question">Questions 1:<span>Create an HTML document with following formatting Bold, Italics, Underline, Colors, Headings, Title, Font and Font Width, Background, Paragraph, Line Brakes, Horizontal Line, Blinking text as well as marquee text.</span></h2>
+        <div class="answer">
+            <h2>Answer:</h2>
+            <div class="answerBox">
+                <b>This is Bold text.</b><br>
+                <i>This is Italic text.</i><br>
+                <u>This is Underline text.</u><br>
+                <strong style="color: red;">This is Colored text.</strong><br>
+                <h1>This is Headings text H1.</h1>
+                <h2>This is Headings text H2.</h2>
+                <h3>This is Headings text H3.</h3>
+                <h4>This is Headings text H4.</h4>
+                <h5>This is Headings text H5.</h5>
+                <h6>This is Headings text H6.</h6>
+                <p style="background: red; color: #fff;">This text's background is red.</p>
+                <p title="Pawan Kumar">This is Title text.</p>
+                <hr title="This is horizontal line.">
+                <marquee>This is Blinking text.</marquee>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

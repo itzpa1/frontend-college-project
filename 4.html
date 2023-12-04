@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: monospace;
+            background-image: url(img/bg.jpg);
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            font-size: 18px;
+        }
+        
+        .containerBox{
+            width: 70%;
+            height: 80%;
+            margin-top: 100px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            backdrop-filter: blur(2px);
+            padding: 10px;
+        }
+
+        .containerBox .question{
+            border-bottom: 2px solid #000;
+        }
+
+        .containerBox .question span{
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+
+
+        .answerBox{
+            font-family: none;
+            width: 90%;
+            height: 90%;
+            background: #fff;
+        }
+
+        .answer h2{
+            color: blue;
+        }
+
+        hr{
+            height: 5px;
+            background: red;
+        }
+
+        .answerBox .websiteBox header{
+            height: 100px;
+            border: 2px solid red;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .websiteBox{
+            width: 100%;
+        }
+
+        .websiteBox header img{
+            width: 80px;
+            margin-right: 20px;
+        }
+
+        .websiteBox header h2{
+            font-family: sans-serif;
+            color: #000;
+        }
+
+        .websiteBox .frame{
+            display: flex;
+            width: 100%;
+            height: 500px;
+        }
+
+        .websiteBox .frame div{
+            border: 2px solid blue;
+            width: 50%;
+        }
+
+        .frame .left{
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .frame .left button{
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: red;
+            cursor: pointer;
+            outline: none;
+            border: 2px solid skyblue;
+            border-radius: 10px;
+            transition: 0.2s;
+        }
+
+        .frame .left button:hover{
+            background: yellow;
+            color: #000;
+        }
+
+        .frame .right p{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .frame .right iframe{
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="containerBox">
+        <h2 class="question">Questions 4:<span>Create a website with horizontal and vertical frames. Top horizontal frame needs to show your college's name and logo. Bottom horizontal frame is to be split into two vertical frames. The left frame has hyperlinks to pages related to faculty, courses, student activities, etc. The right frame shows the corresponding webpage based on the link clicked on the left frame.</span></h2>
+        <div class="answer">
+            <h2>Answer:</h2>
+            <div class="answerBox">
+                <div class="websiteBox">
+                    <header>
+                        <img src="img/arsd-logo.png" alt="arsd-logo">
+                        <h2>ATMA RAM SANATAN DHARMA COLLEGE</h2>
+                    </header>
+                    <div class="frame">
+                        
+                        <div class="left">
+                        <button onclick="faculity()">Faculty</button>
+                        <button onclick="course()">Courses</button>
+                        <button onclick="student()">Student Login</button>
+                        <button onclick="fee()">Online Fees</button>
+                        <button onclick="admissions()">Admissions</button>
+                        </div>
+                        <div class="right">
+                            <p id="p">Click on left options to view webpage.</p>
+                            <iframe id="webpage" src="" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+     p = document.getElementById("p");
+     webpage = document.getElementById("webpage");
+
+    function course(){
+        p.style.display = "none";
+        webpage.src = "https://www.arsdcollege.ac.in/under-graduate-courses/"
+    }
+
+    function faculity(){
+        p.style.display = "none";
+        webpage.src = "https://www.arsdcollege.ac.in/faculty-login/"
+    }
+    
+    function student(){
+        p.style.display = "none";
+        webpage.src = "https://www.arsdcollege.in/Internet/index.aspx"
+    }
+    
+    function fee(){
+        p.style.display = "none";
+        webpage.src = "https://www.arsdcollege.in/OnlinePayment_ARSD/Student_Login.aspx"
+    }
+    
+    function admissions(){
+        p.style.display = "none";
+        webpage.src = "https://www.arsdcollege.ac.in/admission-committee/"
+    }
+</script>
+</html>
